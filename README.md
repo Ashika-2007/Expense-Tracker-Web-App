@@ -50,9 +50,7 @@ This mini project was developed by:
 Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/Expense-Tracker-Web-App.git
-
----
-
+git clone
+ https://ashika-2007.github.io/Expense-Tracker-Web-App/
 
 ---
