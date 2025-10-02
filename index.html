@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="light">
+
+  <!-- Floating Amoeba Shapes -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="blob blob4"></div>
+  <div class="blob blob5"></div>
+
+  <div class="container">
+    <h1>💰 Expense Tracker</h1>
+
+    <!-- Theme Selector -->
+    <div class="theme-toggle">
+      <label for="theme">Choose Theme:</label>
+      <select id="theme">
+        <option value="light">Light Mode</option>
+        <option value="dark">Dark Mode</option>
+        <option value="vibrant">Vibrant Blue</option>
+        <option value="mint">Mint Green</option>
+      </select>
+    </div>
+
+    <!-- Expense Form -->
+    <label for="category">Category:</label>
+    <select id="category" onchange="handleCategoryChange()">
+      <option value="Food">Food 🍔</option>
+      <option value="Transport">Transport 🚌</option>
+      <option value="EMI">EMI 💳</option>
+      <option value="House Rent">House Rent 🏠</option>
+      <option value="Medical">Medical 💊</option>
+      <option value="Bills">Bills 📑</option>
+      <option value="Education">Education 📚</option>
+      <option value="Other">Other ➕</option>
+    </select>
+    <input type="text" id="otherCategory" placeholder="Enter custom category" style="display:none;">
+
+    <label for="date">Date:</label>
+    <input type="date" id="date">
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <button onclick="addExpense()">Add Expense</button>
+    <button onclick="generateReport()">Generate Monthly Report</button>
+    <button onclick="compareReports()">Compare Reports</button>
+
+    <canvas id="expenseChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background 0.5s, color 0.5s;
+  position: relative;
+}
+
+/* Floating blobs - more & darker */
+.blob {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
+  filter: blur(60px);
+  animation: float 30s infinite ease-in-out;
+  z-index: 0;
+  opacity: 0.4;
+}
+.blob1 { top: 5%; left: 10%; }
+.blob2 { top: 20%; left: 70%; }
+.blob3 { top: 50%; left: 30%; }
+.blob4 { top: 60%; left: 50%; }
+.blob5 { top: 80%; left: 20%; }
+
+@keyframes float {
+  0% { transform: translate(0,0) rotate(0deg); }
+  50% { transform: translate(80px,100px) rotate(180deg); }
+  100% { transform: translate(0,0) rotate(360deg); }
+}
+
+/* Container */
+.container {
+  position: relative;
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+/* Header */
+h1 { text-align: center; margin-bottom: 10px; }
+
+/* Labels, Inputs, Selects */
+label { font-weight: bold; display: block; margin: 10px 0 5px; }
+select, input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+input:focus, select:focus { outline: none; border-color: #4CAF50; box-shadow: 0 0 8px rgba(76,175,80,0.3); }
+
+/* Buttons */
+button {
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+button:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(76,175,80,0.5); }
+
+/* Theme Toggle */
+.theme-toggle { margin: 10px 0 20px; text-align: center; }
+
+/* Canvas */
+canvas { margin-top: 20px; }
+
+/* Light Theme */
+body.light { background: #f4f4f9; color: #333; }
+body.light .container { background: white; }
+body.light .blob1 { background: rgba(255,99,132,0.3); }
+body.light .blob2 { background: rgba(54,162,235,0.3); }
+body.light .blob3 { background: rgba(255,206,86,0.3); }
+body.light .blob4 { background: rgba(75,192,192,0.3); }
+body.light .blob5 { background: rgba(153,102,255,0.3); }
+
+/* Dark Theme */
+body.dark { background: #1e1e2f; color: white; }
+body.dark .container { background: #2c2c3c; color: white; }
+body.dark .blob1 { background: rgba(0,255,200,0.2); }
+body.dark .blob2 { background: rgba(255,100,255,0.2); }
+body.dark .blob3 { background: rgba(255,150,50,0.2); }
+body.dark .blob4 { background: rgba(0,255,255,0.2); }
+body.dark .blob5 { background: rgba(255,50,255,0.2); }
+
+/* Vibrant Theme */
+body.vibrant { background: #0099ff; color: white; }
+body.vibrant .container { background: #ffffffdd; color: #222; }
+body.vibrant .blob1 { background: rgba(255,50,150,0.3); }
+body.vibrant .blob2 { background: rgba(0,150,255,0.3); }
+body.vibrant .blob3 { background: rgba(255,200,0,0.3); }
+body.vibrant .blob4 { background: rgba(50,255,150,0.3); }
+body.vibrant .blob5 { background: rgba(255,100,0,0.3); }
+
+/* Mint Theme */
+body.mint { background: #d4f7dc; color: #333; }
+body.mint .container { background: #ffffffdd; color: #222; }
+body.mint .blob1 { background: rgba(0,200,100,0.3); }
+body.mint .blob2 { background: rgba(100,255,150,0.3); }
+body.mint .blob3 { background: rgba(50,150,100,0.3); }
+body.mint .blob4 { background: rgba(0,255,200,0.3); }
+body.mint .blob5 { background: rgba(150,255,180,0.3); }
